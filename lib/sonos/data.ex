@@ -1,6 +1,9 @@
 defmodule Sonos.Data do
+  @path "~/bin/data/sonos.json"
+
   def read do
-    File.read!("data/sonos.json")
+    Path.expand(@path)
+    |> File.read!()
     |> Jason.decode!(keys: :atoms)
   end
 
@@ -8,6 +11,7 @@ defmodule Sonos.Data do
     data = %{integration: integration, users: users}
     json = Jason.encode!(data, pretty: true)
 
-    File.write!("data/sonos.json", json)
+    Path.expand(@path)
+    |> File.write!(json)
   end
 end
