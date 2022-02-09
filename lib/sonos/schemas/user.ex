@@ -9,6 +9,7 @@ defmodule Sonos.Schemas.User do
     field :refresh_token, :string
     field :access_token, :string
     field :expires_at, :utc_datetime
+    field :player, :string
     field :night_mode, :boolean, default: false
     field :enhance_dialog, :boolean, default: false
   end
@@ -20,6 +21,7 @@ defmodule Sonos.Schemas.User do
       :refresh_token,
       :access_token,
       :expires_at,
+      :player,
       :night_mode,
       :enhance_dialog
     ])
@@ -28,6 +30,7 @@ defmodule Sonos.Schemas.User do
       :refresh_token,
       :access_token,
       :expires_at,
+      :player,
       :night_mode,
       :enhance_dialog
     ])

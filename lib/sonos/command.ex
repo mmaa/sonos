@@ -8,7 +8,7 @@ defmodule Sonos.Command do
       %{players: players} =
         Client.command_get(user, "/households/#{household.id}/groups")
 
-      for player <- Enum.filter(players, &(&1.name == "Living Room")) do
+      for player <- Enum.filter(players, &(&1.name == user.player)) do
         Client.command_post(
           user,
           "/players/#{player.id}/homeTheater/options",
