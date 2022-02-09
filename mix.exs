@@ -5,7 +5,7 @@ defmodule Sonos.MixProject do
     [
       app: :sonos,
       version: "0.1.0",
-      elixir: "~> 1.10",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       escript: escript(),
       deps: deps()
@@ -26,9 +26,9 @@ defmodule Sonos.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, "~> 1.2"},
-      {:httpoison, "~> 1.7"},
-      {:ecto, "~> 3.4"}
+      {:jason, "~> 1.3"},
+      {:httpoison, "~> 1.8"},
+      {:ecto, "~> 3.7"}
     ]
   end
 end
